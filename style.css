@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+body {
+    background-color: #81C7D4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+}
+
+.container{
+    width: 600px;
+    margin: auto;
+    border: 5px solid white;
+    overflow: auto;
+    
+}
+
+.jumbo{
+    width: 600px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+.thumb{
+    width: 200px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    float: left;
+    border: 2px solid white;
+    box-sizing: border-box;
+    
+}
+
+.thumb:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade{
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.active{
+    opacity: 0.7;
+}
+
+.typewritter{
+    position: absolute;
+    line-height: 1.2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 37ch;
+    animation: typing 8s steps(37) forwards, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    font-family: monospace;
+    font-size: 2em;
+    color: white;
+}
+
+@keyframes typing{
+    0%, 100%{
+        width: 0;
+    }
+    50%{
+        width: 37ch;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
